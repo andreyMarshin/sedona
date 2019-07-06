@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
-    <div class="container">
+    <div class="wrapper">
       <header class="main-header">
         <nav class="main-navigation">
           <a class="main-header-logo" href="index.html"> 
@@ -67,10 +67,10 @@
               <legend class="filter-range-title">Стоимость в сутки (р):</legend>
                 <div class="price-controls">
                   <label class="min-price-from" for="min-price">
-                    от<input class="min-price" type="number" id="min-price" name="min-price" value="0" min="0" max="5000">
+                    от <input class="min-price" type="number" id="min-price" name="min-price" value="0" min="0" max="5000">
                   </label>
                   <label class="max-price-to" for="max-price">
-                    до<input class="max-price" type="number" id="max-price" name="max-price" value="3000" min="0" max="5000">
+                    до <input class="max-price" type="number" id="max-price" name="max-price" value="3000" min="0" max="5000">
                   </label>
                 </div>
                 <div class="range-controls">
@@ -86,19 +86,19 @@
         </section>
         
         <section class="sort">
-          <p class="result-bold">Найдено: 3</p>
-          <span>Сортировка:</span>
-          <ul class="sort-list">
-            <li class="sort-list-item site-navigation-current"><a class="sort-param-current" href="#">По цене</a></li>
-            <li class="sort-list-item"><a class="sort-param" href="#">По типу</a></li>
-            <li class="sort-list-item"><a class="sort-param" href="#">По рейтингу</a></li>
-          </ul>
+            <p class="result-bold">Найдено: 3</p>
+            <span class="result-sort">Сортировка:</span>
+            <ul class="sort-list">
+              <li class="sort-list-item"><a class="sort-param sort-param-current" href="#">По цене</a></li>
+              <li class="sort-list-item"><a class="sort-param" href="#">По типу</a></li>
+              <li class="sort-list-item"><a class="sort-param" href="#">По рейтингу</a></li>
+            </ul>
           <ul class="sort-arrows">
-            <li class="arrow-current">
-              <a class="arrow-up" href="#">По возрастанию</a>
+            <li class="arrow arrow-current">
+              <a class="arrow-link arrow-link-up arrow-link-current" href="#">По возрастанию</a>
             </li>
             <li class="arrow">
-              <a class="arrow-down" href="#">По убыванию</a>
+              <a class="arrow-link arrow-link-down" href="#">По убыванию</a>
             </li>
           </ul>
         </section>
@@ -109,12 +109,12 @@
             <li class="catalog-item">
               <img class="hotel-photo" src="img/hotel1.jpg" width="135" height="90" alt="photo-Amora Resort & Spa">
               <div class="hotel-description">
-                <h3><a href="#">Amora Resort & Spa</a></h3>
-                <span class="type">Гостница</span>
+                <h3 class="hotel-name"><a class="hotel-link" href="#">Amara Resort & Spa</a></h3>
+                <span class="type">Гостиница</span>
                 <span class="price">от 4000 Р.</span>
                 <p class="booking">
-                  <a class="detal-btn" href="#">Подробнее</a>
-                  <a class="booking-btn" href="#">Забронировать</a>
+                    <a class="btn blue-btn detal-btn" href="#">Подробнее</a>
+                    <a class="btn booking-btn" href="#">Забронировать</a>
                 </p>
               </div>
               <div class="hotel-rate">
@@ -132,12 +132,12 @@
             <li class="catalog-item">
               <img class="hotel-photo" src="img/hotel2.jpg" width="135" height="90" alt="photo-Desert Quail Inn">
               <div class="hotel-description">
-                <h3><a href="#">Desert Quail Inn</a></h3>
+                <h3 class="hotel-name"><a class="hotel-link" href="#">Desert Quail Inn</a></h3>
                 <span class="type">Мотель</span>
                 <span class="price">от 3000 Р.</span>
                 <p class="booking">
-                  <a class="detal-btn" href="#">Подробнее</a>
-                  <a class="booking-btn" href="#">Забронировать</a>
+                    <a class="btn blue-btn detal-btn" href="#">Подробнее</a>
+                    <a class="btn booking-btn" href="#">Забронировать</a>
                 </p>
               </div>
               <div class="hotel-rate">
@@ -154,12 +154,12 @@
             <li class="catalog-item">
               <img class="hotel-photo" src="img/hotel3.jpg" width="135" height="90" alt="photo-Villas At Poco Diablo">
               <div class="hotel-description">
-                <h3><a href="#">Villas At Poco Diablo</a></h3>
+                <h3 class="hotel-name"><a class="hotel-link" href="#">Villas At Poco Diablo</a></h3>
                 <span class="type">Апартаменты</span>
                 <span class="price">от 2000 Р.</span>
                 <p class="booking">
-                  <a class="detal-btn" href="#">Подробнее</a>
-                  <a class="booking-btn" href="#">Забронировать</a>
+                  <a class="btn blue-btn detal-btn" href="#">Подробнее</a>
+                  <a class="btn booking-btn" href="#">Забронировать</a>
                 </p>
               </div>
               <div class="hotel-rate">
