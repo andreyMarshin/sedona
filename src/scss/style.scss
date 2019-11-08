@@ -1,0 +1,16 @@
+@import "normalize.scss";
+@import "variables.scss";
+
+// global
+@import "global/base.scss";
+@import "global/fonts.scss";
+@import "global/button.scss";
+
+// blocks
+@import "blocks/main-nav.scss";
+@import "blocks/features.scss";
+@import "blocks/reasons.scss";
+@import "blocks/feedback.scss";
+@import "blocks/page-footer.scss";
+
+

@@ -1,0 +1,134 @@
+.main-nav {
+  min-width: $mobile-width;
+
+  &__toggle {
+    position: absolute;
+    padding: 0;
+    top: 6px;
+    right: 20px;
+    width: 40px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &--closed &__toggle::before {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 23px;
+    height: 4px;
+    background-color: $blue;
+    box-shadow: 0 8px 0 0 $blue, 0 16px 0 0 $blue;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+
+  &--opened &__toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      width: 24px;
+      height: 4px;
+      background-color: $white;
+      transition-duration: 0.4s;
+      transition-timing-function: ease-out;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (max-width: 767px) {
+    &--closed &__site-list {
+      display: none;
+    }
+  }
+
+  &__no-js &__toggle {
+    display: none;
+  }
+
+  &--no-js &__site-list {
+    display: block;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__site-list {
+    // z-index: 101;
+  }
+
+  &__site-item {
+    padding: 8px 0;
+    background-color: $blue;
+    text-align: center;
+    border-top: 1px solid #9ac2db;
+    border-bottom: 1px solid #678fa8;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__site-link {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+    color: $white;
+  }
+
+
+  &__logo {
+    text-align: center;
+    // background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 20%)
+  }
+
+  &__logo-img {
+    // display: none;
+    z-index: 100;
+  }
+
+  @media (min-width: $tablet-width){
+    position: relative;
+    
+    &__site-list {
+      padding: 0 30px 0 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__site-item {
+      padding: 8px 0;
+      background-color: $white;
+      border: none;
+    }
+
+    &__site-link {
+      font-size: 14px;
+      line-height: 26px;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.reasons {
+  // position: relative;
+
+  &__item-title {
+    background-color: $blue;
+    padding: 60px 20px 40px;
+    text-align: center;
+    color: $white;
+
+    &--grey {
+      padding: 34px 20px 0px;
+      background-color: $grey;
+      color: $black;
+    }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   width: 100%;
+    //   min-height: 26px;
+
+    //   background-size: 100%;
+    //   background-repeat: no-repeat;
+    //   background-image: url("../img/bg-intro-triangle-mobile.svg");
+    //   fill: $white;
+    // }
+  }
+
+  &__title {
+    margin: 0 0 14px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__number {
+    position: relative;
+    margin: 0 0 18px;
+
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   top: 50%;
+    //   left: 40%;
+    //   width: 8px;
+    //   height: 1px;
+    //   background-color: $white;
+    // }
+
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   top: 50%;
+    //   left: 40%;
+    //   width: 8px;
+    //   height: 1px;
+    //   background-color: $white;
+    // }
+  }
+
+  &__descr {
+    margin: 0;
+
+    &--border {
+      padding: 0 0 20px;
+      border-bottom: 2px solid $dark-grey;
+
+      // &:last-child {
+      //   border-bottom: none;
+      // }
+    }
+  }
+
+  &__image-wrapper {
+    height: 260px;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/photo-city.jpg");
+
+    &--bridge {
+      background-image: url("../img/photo-bridge.jpg");
+    }
+  }
+
+  &__list {
+    padding: 38px 20px 36px;
+  }
+
+  &__list-item {
+    margin: 0 0 20px 0;
+  }
+
+  &__list-item-title {
+    position: relative;
+    padding: 13px 0 0 50px;
+    margin: 0 0 14px;
+
+    color: $black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      display: block;
+      width: 39px;
+      height: 37px;
+    }
+
+    &--house {
+      &::before {
+        background-image: url("../img/icon-house.svg");
+      }
+    }
+
+    &--gift {
+      &::before {
+        left: 3px;
+        width: 32px;
+        height: 38px;
+        background-image: url("../img/icon-gift.svg");
+      }
+    }
+
+    &--burger {
+      &::before {
+        width: 39px;
+        height: 35px;
+        background-image: url("../img/icon-burger.svg");
+      }
+    }
+  }
+
+  &__list-item-descr {
+    padding: 0 0 0 50px;
+    margin: 0;
+    color: $black;
+  }
+}
