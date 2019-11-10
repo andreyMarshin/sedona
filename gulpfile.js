@@ -68,4 +68,4 @@ gulp.task('watch', function() {
   gulp.watch('src/*.html',  gulp.series('html')).on('change', browserSync.reload); // - наблюдаем за измением в файлах
 });
 
-gulp.task('default', gulp.series('build', 'watch'));  // - базовая серия с вотчером и сборкой в прод
+gulp.task('start', gulp.series('build', 'watch'));  // - базовая серия с вотчером и сборкой в прод

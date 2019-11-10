@@ -1,0 +1,8 @@
+.container {
+  background-color: $white;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    width: 1200px;
+  }
+}

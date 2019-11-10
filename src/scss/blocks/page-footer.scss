@@ -1,4 +1,6 @@
 .page-footer {
+  background-color: $white;
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -82,6 +84,29 @@
       width: 27px;
       height: 34px;
       background-image: url("../img/symbols/logo-htmlacademy.svg");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &__wrapper {
+      padding: 36px 60px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__hashtag {
+      margin: 0;
+    }
+
+    &__social-list {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &__wrapper {
+      padding: 36px 120px;
     }
   }
 }

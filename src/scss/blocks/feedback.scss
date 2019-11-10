@@ -1,4 +1,5 @@
 .feedback {
+  margin: 0 auto;
   padding: 30px 0 0;
   text-align: center;
 
@@ -18,10 +19,43 @@
     margin: 0 0 50px;
   }
 
-  &__map {
-    // margin: 0 0 40px;
-    min-width: 320px;
+  &__map iframe{
     height: 350px;
-    background-color: honeydew;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 0 0;
+
+    &__title {
+      margin: 0 0 34px;
+      font-size: 30px;
+      line-height: 26px;
+    }
+
+    &__descr {
+      padding: 0 24%;
+      margin: 0 0 48px;
+    }
+
+    &__btn-search {
+      margin: 0 0 58px;
+      width: 458px;
+    }
+
+    &__map iframe{
+      min-width: $tablet-width;
+      height: 350px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &__map iframe{
+      width: 1200px;
+    }
+
+    &__descr {
+      padding: 0 30%;
+    }
   }
 }

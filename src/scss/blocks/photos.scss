@@ -1,0 +1,142 @@
+.photos {
+  &__block {
+    padding: 22px 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 0 20px;
+    // max-width: 500px;
+    // max-height: 500px;
+    // margin: 0 auto 20px 0;
+  }
+
+  &__info {
+    line-height: 24px;
+  }
+
+  &__title {
+    margin: 0 0 14px;
+  }
+
+  &__descr {
+    margin: 0 0 10px;
+    text-transform: none;
+  }
+
+  &__like {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0 0 0 36px;
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background-image: url("../img/icon-like.svg");
+      width: 23px;
+      height: 21px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 60px 60px;
+    }
+
+    &__block {
+      width: 50%;
+      background-color: #f2f2f2;
+
+      &:nth-child(1) {
+        width: 100%;
+      }
+
+      &:nth-child(3) {
+        background-color: #eaeaea;
+      }
+      padding: 0;
+      border: none;
+    }
+
+    &__img {
+      margin: 0;
+    }
+
+    &__info {
+
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    &__title {
+      // margin: 0 0 8px;
+      margin: 0;
+      width: 80%;
+    }
+
+    &__descr {
+      margin: 0;
+      width: 70%;
+    }
+
+    &__like {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      width: 10%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &__wrapper {
+      padding: 0 0 62px;
+    }
+
+    &__block {
+      position: relative;
+      width: 33.3333333333%;
+    }
+
+    &__info {
+      position: absolute;
+      width: 100%;
+      padding: 20px 0;
+      bottom: 0;
+      color: $white;
+      background: rgba(0 ,0, 0, 0.3);
+      z-index: 1;
+    }
+
+    &__title {
+      padding: 0 20px;
+      // margin: 0 0 8px;
+      margin: 0;
+      width: 80%;
+    }
+
+    &__descr {
+      padding: 0 20px;
+      margin: 0;
+      width: 70%;
+    }
+
+    &__like {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      width: 10%;
+    }
+   }
+}

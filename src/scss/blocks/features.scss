@@ -1,9 +1,8 @@
 .features {
+  position: relative;
   margin-top: -32px;
 
   &__intro {
-    // position: relative;
-    margin-bottom: 40px;
     background-image: url("../img/bg-back-mobile.jpg");
     background-position: center top;
     background-size: cover;
@@ -15,7 +14,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 427px;
+      top: 369px;
       left: 0;
       right: 0;
       width: 100%;
@@ -25,17 +24,35 @@
       background-repeat: no-repeat;
       background-image: url("../img/bg-intro-triangle-mobile.svg");
     }
+
+    &--inner-page {
+      background-position: bottom right 10%;
+      background-size: 170%;
+
+      &::before {
+        top: 136px;
+      }
+    }
   }
 
   &__big-title {
     display: block;
     padding: 90px 0;
     margin: 0 auto;
+
+    &--inner-page {
+      padding: 52px 0 70px;
+    }
   }
 
   &__text {
-    padding: 0 30px;
+    padding: 40px 0 46px;
     text-align: center;
+
+    &--inner-page {
+      padding: 40px 0 34px;
+      border-bottom: 1px solid #e5e5e5;
+    }
 
     // &::before {
     //   content: "";
@@ -54,12 +71,103 @@
 
   &__title {
     margin: 0 0 36px 0;
+    padding: 0 30px;
     font-size: 18px;
     line-height: 26px;
   }
 
   &__descr {
-    margin: 0 0 46px;
+    margin: 0;
+    padding: 0 20px;
     line-height: 26px;
+  }
+
+  @media (min-width: $tablet-width){
+    margin-top: 0;
+
+    &__intro {
+      background-image: url("../img/bg-back-desktop.jpg");
+      @media #{$retina} {
+        background-image: url("../img/bg-back-desktop@2x.jpg");
+      }
+
+      &::before {
+        top: 460px;
+        min-height: 57px;
+        background-image: url("../img/bg-intro-triangle-tablet.svg");
+      }
+
+      &--inner-page {
+        background-position: bottom 2% right 55%;
+        background-size: 170%;
+
+        &::before {
+          top: 237px;
+        }
+      }
+    }
+
+    &__big-title {
+      width: 460px;
+      height: 350px;
+      padding: 77px 0 90px;
+      margin: 0 auto;
+
+      &--inner-page {
+        width: 450px;
+        height: 78px;
+        padding: 96px 0 120px;
+      }
+    }
+
+    &__text {
+      padding: 50px 60px 54px;
+
+      &--inner-page {
+        padding: 40px 140px 70px;
+        border-bottom: none;
+      }
+    }
+
+    &__title {
+      font-size: 21px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &__intro {
+      background-image: url("../img/bg-back-desktop.jpg");
+      @media #{$retina} {
+        background-image: url("../img/bg-back-desktop@2x.jpg");
+      }
+
+      &::before {
+        content: "";
+        top: 460px;
+        background-image: url("../img/bg-intro-triangle-desktop.svg");
+      }
+
+      &--inner-page {
+        background-position: bottom 2% right 55%;
+        background-size: 100%;
+
+        &::before {
+          top: 249px;
+        }
+      }
+    }
+
+    &__text {
+      padding: 54px 360px 54px;
+    }
+
+    &__big-title {
+
+      &--inner-page {
+        width: 461px;
+        height: 80px;
+        padding: 104px 0 122px;
+      }
+    }
   }
 }
