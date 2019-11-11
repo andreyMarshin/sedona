@@ -85,6 +85,15 @@
     border-top: 1px solid #9ac2db;
     border-bottom: 1px solid #678fa8;
 
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active, &:focus {
+      background-color: #5496bd;
+      opacity: 0.9;
+    }
+
     &:first-child {
       border-top: none;
     }
@@ -135,12 +144,25 @@
       &:nth-child(3) {
         margin-left: 120px;
       }
+
+      &:active, &:focus, &:hover  {
+        background-color: $white;
+        opacity: 1;
+      }
     }
 
     &__site-link {
       font-size: 14px;
       line-height: 26px;
       color: $black;
+
+      &:hover {
+        color: #81b3d2;
+      }
+
+      &:active, &:focus  {
+        color: #dbdbdb;
+      }
     }
 
      &__logo-img {

@@ -30,6 +30,15 @@
     width: 46px;
     height: 48px;
     background-color: $blue;
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active, &:focus {
+      background-color: #669ec0;
+      opacity: 0.8;
+    }
   }
 
   &__social-link {
@@ -50,7 +59,7 @@
       left: 14px;
       width: 17px;
       height: 14px;
-      background-image: url("../img/symbols/icon-twitter.svg");
+      background-image: url("../img/svg/icon-twitter.svg");
     }
 
     &--fb::before {
@@ -58,7 +67,7 @@
       left: 18px;
       width: 9px;
       height: 18px;
-      background-image: url("../img/symbols/icon-facebook.svg");
+      background-image: url("../img/svg/icon-facebook.svg");
     }
 
     &--yt::before {
@@ -66,7 +75,7 @@
       left: 14px;
       width: 20px;
       height: 14px;
-      background-image: url("../img/symbols/icon-youtube.svg");
+      background-image: url("../img/svg/icon-youtube.svg");
     }
   }
 
@@ -75,24 +84,47 @@
     padding: 6px 40px 10px 0;
     line-height: 26px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      width: 27px;
-      height: 34px;
-      background-image: url("../img/symbols/logo-htmlacademy.svg");
+    &:hover {
+      fill: $blue;
+      opacity: 0.6;
+    }
+
+    &:active, &:focus {
+      fill: #b2b2b2;
+      opacity: 0.6;
+    }
+  }
+
+  &__copyright-img {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 27px;
+    height: 34px;
+  }
+
+  @media (min-width: 525px) {
+    &__wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 36px 20px;
+    }
+
+    &__hashtag {
+      margin: 0;
+    }
+
+    &__social-list {
+      margin: 0;
     }
   }
 
   @media (min-width: $tablet-width) {
     &__wrapper {
       padding: 36px 60px;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
     }
 
     &__hashtag {

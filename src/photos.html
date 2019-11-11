@@ -112,14 +112,43 @@
             <div class="video__player">
               <div class="video__slider">
                 <hr>
-                <button class="video__btn video__btn--replay video__btn--tablet"></button>
-                <button class="video__btn video__btn--cc video__btn--tablet"></button>
-                <button class="video__btn video__btn--full-screen video__btn--tablet"></button>
               </div>
               <div class="video__controls">
-                <button class="video__btn video__btn--replay"></button>
-                <button class="video__btn video__btn--cc"></button>
-                <button class="video__btn video__btn--full-screen"></button>
+                <button class="video__btn video__btn--replay">
+                  <svg class="video__btn-icon video__btn-icon--replay" width="10" height="10">
+                      <use xlink:href="img/svg/sprite.svg#icon-video-replay"></use>
+                  </svg>
+                </button>
+                <button class="video__btn video__btn--cc">
+                  <svg class="video__btn-icon video__btn-icon--cc" width="10" height="10">
+                      <use xlink:href="img/svg/sprite.svg#video_subtitle"></use>
+                  </svg>
+                </button>
+                <button class="video__btn video__btn--fullscreen">
+                  <svg class="video__btn-icon video__btn-icon--fullscreen" width="10" height="10">
+                      <use xlink:href="img/svg/sprite.svg#video_fullscreen"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="video__player video__player--tablet">
+              <div class="video__container">
+                <hr>
+                <button class="video__btn video__btn--replay">
+                  <svg class="video__btn-icon video__btn-icon--replay" width="10" height="10">
+                      <use xlink:href="img/svg/sprite.svg#icon-video-replay"></use>
+                  </svg>
+                </button>
+                <button class="video__btn video__btn--cc">
+                  <svg class="video__btn-icon video__btn-icon--cc" width="10" height="10">
+                      <use xlink:href="img/svg/sprite.svg#video_subtitle"></use>
+                  </svg>
+                </button>
+                <button class="video__btn video__btn--fullscreen">
+                  <svg class="video__btn-icon video__btn-icon--fullscreen" width="10" height="10">
+                      <use xlink:href="img/svg/sprite.svg#video_fullscreen"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -150,6 +179,9 @@
           <div class="page-footer__copyright">
             <a href="#" class="page-footer__copyright-link" aria-label="HTML Academy">
               Разработано
+              <svg class="page-footer__copyright-img">
+                  <use xlink:href="img/svg/sprite.svg#logo-htmlacademy"></use>
+              </svg>
             </a>
           </div>
         </div>

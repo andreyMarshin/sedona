@@ -4,6 +4,20 @@ const del = require('del');
 const sass = require('gulp-sass');
 const autoprefix = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
+const svgSprite = require('gulp-svg-sprite');
+
+gulp.task('svgSprite', function () {
+    return gulp.src('src/img/svg/*.svg') // svg files for sprite
+        .pipe(svgSprite({
+                mode: {
+                    stack: {
+                        sprite: "../sprite.svg"  //sprite file name
+                    }
+                },
+            }
+        ))
+        .pipe(gulp.dest('src/img/svg/'));
+});
 
 function htmlBuild() {  // собираем все html файлы
   return gulp.src('src/*.html')
@@ -48,7 +62,7 @@ gulp.task('fonts', function() {
 gulp.task('build',
   gulp.series(
       'clearBuild',
-      gulp.parallel('html', 'scripts', 'css', 'fonts', 'img' )  // - серия вызовов тасков
+      gulp.parallel('html', 'scripts', 'css', 'fonts', 'img')  // - серия вызовов тасков
   )
 );
 

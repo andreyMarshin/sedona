@@ -9,16 +9,15 @@
   text-align: center;
   text-transform: uppercase;
   background-color: $blue;
+  border: none;
   outline: none;
   cursor: pointer;
 
   &:hover {
-    background-color: $text-descr;
-    color: $white;
+    background-color: #669ec0;
   }
 
   &:active, &:focus {
-    background-color: $text-descr;
-    color:rgba(255, 255, 255, 0.3)
+    opacity: 0.8;
   }
 }

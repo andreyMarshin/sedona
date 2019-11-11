@@ -23,6 +23,10 @@
     margin: -46px auto 0;
     padding: 0 20px;
     min-width: 280px;
+
+    &--tablet {
+      display: none;
+    }
   }
 
   &__slider {
@@ -59,68 +63,74 @@
     position: relative;
     display: block;
     background-color: inherit;
-    // width: 10px;
-    // height: 10px;
     border: none;
     outline: none;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-    }
+    cursor: pointer;
 
     &--tablet {
       display: none;
     }
 
     &--replay {
-      flex-basis: 60%;
       width: 32px;
       height: 32px;
       padding: 6px 6px;
-
-      &::before {
-        top: 6px;
-        left: 7px;
-        width: 16px;
-        height: 20px;
-        background-image: url("../img/symbols/icon-video-replay.svg");
-      }
+      flex-grow: 12;
     }
 
     &--cc {
       width: 44px;
       height: 32px;
       padding: 6px 6px;
-
-      &::before {
-        top: 6px;
-        left: 6px;
-        width: 32px;
-        height: 20px;
-        background-image: url("../img/symbols/icon-video-subtitles.svg");
-      }
+      flex-grow: 1;
     }
 
-    &--full-screen {
+    &--fullscreen {
       width: 32px;
       height: 32px;
       padding: 6px 6px;
-
-      &::before {
-        top: 6px;
-        left: 6px;
-        width: 20px;
-        height: 20px;
-        background-image: url("../img/symbols/icon-video-fullscreen.svg");
-      }
     }
   }
 
-  @media (min-width: $tablet-width) { 
-    padding: 0 60px;
+  &__btn-icon {
+    position: absolute;
+    fill: #5c6870;
+
+    &:hover {
+      fill: #3f3f3f;
+    }
+
+    &:active, &:focus {
+      fill: #3f3f3f;
+      opacity: 0.3;
+    }
+
+    &--replay {
+
+      top: 6px;
+      left: 7px;
+      width: 16px;
+      height: 20px;
+    }
+
+    &--cc {
+
+      top: 6px;
+      left: 6px;
+      width: 32px;
+      height: 20px;
+    }
+
+    &--fullscreen {
+      top: 6px;
+      left: 6px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 8%;
     text-align: center;
 
     &__title {
@@ -134,31 +144,100 @@
     }
 
     &__player {
-      // position: relative;
-      display: block;
-      margin: -92px auto 0;
-      padding: 0 20px;
-      min-width: 280px;
-    }
-
-    &__slider {
       position: relative;
-      padding: 45px 80px;
+      margin: -90px 0 0 0;
+      padding: 0;
       background: rgba(0 ,0, 0, 0.3);
-
-      &::before {
-        position: absolute;
-        content: "";
-        width: 10px;
-        top: 42%;
-        left: 30%;
-        height: 10px;
-        border-radius: 50%;
-        background-color: $white;
-      }
+      z-index: 100;
     }
 
     &__controls {
+      position: relative;
+      padding: 45px 0;
+      background: rgba(0 ,0, 0, 0.3);
+      transition: 0.5s;
+
+      &:hover {
+        background: rgba(0 ,0, 0, 0.6);
+        transition: 0.5s;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 60%;
+        left: 14%;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.3);
+        top: 50%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 47%;
+        left: 30%;
+        width: 10px;
+        height: 10px;
+        background-color: $white;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+
+    &__controls:hover::after,
+    &__controls:hover::before {
+      opacity: 0.6;
+    }
+
+    &__controls:active::after,
+    &__controls:focus::after,
+    &__controls:active::before,
+    &__controls:focus::before {
+      opacity: 0.2;
+    }
+
+    &__btn {
+      position: absolute;
+      display: block;
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: none;
+
+      &--replay {
+        top: 34%;
+        left: 5%;
+      }
+
+      &--cc {
+        top: 34%;
+        right: 12%;
+      }
+
+      &--fullscreen {
+        top: 34%;
+        right: 4%;
+      }
+    }
+
+    &__btn-icon {
+      fill: #ffffff;
+      transition: 0.3s;
+
+      &:hover {
+        fill: #ffffff;
+        opacity: 0.6;
+      }
+
+      &:active, &:focus {
+        fill: #ffffff;
+        opacity: 0.2;
+      }
+    }
+
+    &__slider {
       display: none;
     }
   }

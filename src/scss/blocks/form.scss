@@ -1,6 +1,6 @@
 .review {
   &__form-group {
-    padding: 22px 20px 26px;
+    padding: 22px 6% 26px;
     border-bottom: 1px solid #e5e5e5;
 
     &:last-child {
@@ -78,7 +78,6 @@
     }
 
     &--attractions, &--feeling {
-      // padding: 0 0 0 80px;
       margin-left: auto;
       font-size: 18px;
       font-weight: bold;
@@ -98,7 +97,6 @@
         background-color: #f2f2f2f2;
         border-radius: 50%;
         cursor: pointer;
-
       }
 
       &::after {
@@ -128,7 +126,6 @@
         background-color: #f2f2f2f2;
         border-radius: 10%;
         cursor: pointer;
-
       }
 
       &::after {
@@ -146,7 +143,22 @@
         transform: translateX(-50%) rotate(45deg);
       }
     }
+
+    &--feeling:hover::before,
+    &--attractions:hover::before {
+      background-color: #e5e5e5;
+    }
+
+    &--feeling:active::before,
+    &--feeling:focus::before,
+    &--feeling:active::after,
+    &--feeling:focus::after,
+    &--attractions:active::before,
+    &--attractions:focus::before {
+      background-color: rgba(0 ,0, 0, 0.3);
+    }
   }
+
 
   &__input {
     display: block;
@@ -159,6 +171,16 @@
 
     &--full-name {
       flex-grow: 1;
+    }
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:active, &:focus {
+      background-color: #f2f2f2;
+      // border: 4px solid #e5e5e5;
+      box-shadow: 0 0 0 4px #e5e5e5;;
     }
   }
 
@@ -332,7 +354,6 @@
 
     &__info {
       display: block;
-      // margin: 0 0 30px;
       margin: 0;
       line-height: 26px;
     }
