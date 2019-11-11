@@ -103,7 +103,7 @@
 
 
   &__logo {
-    text-align: center;
+    margin: 0 auto;
     z-index: 10;
   }
 
@@ -155,6 +155,10 @@
       top: 40px; left: 0; bottom: 0; right: 0;
       width: 188px;
       height: 96px;
+    }
+
+    &__site-list {
+      justify-content: space-around;
     }
   }
 }
