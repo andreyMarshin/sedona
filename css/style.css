@@ -467,6 +467,7 @@ img {
     margin: 0 auto;
     z-index: 10; }
   .main-nav__logo-img {
+    text-align: center;
     margin: 0 auto;
     z-index: 10; }
   @media (min-width: 768px) {
@@ -1075,23 +1076,24 @@ img {
     position: absolute;
     display: block;
     top: 20%;
+    width: 20px;
     background-color: inherit;
     border: none;
     outline: none;
     cursor: pointer;
     background: none; }
     .video__btn--replay {
-      left: 6%;
+      left: 20px;
       width: 16px;
       height: 20px;
       background-image: url("../img/svg/icon-video-replay.svg"); }
     .video__btn--cc {
-      right: 16%;
+      right: 60px;
       width: 32px;
       height: 20px;
       background-image: url("../img/svg/icon-subtitle.svg"); }
     .video__btn--fullscreen {
-      right: 6%;
+      right: 20px;
       width: 20px;
       height: 20px;
       background-image: url("../img/svg/icon-fullscreen.svg"); }
@@ -1672,7 +1674,7 @@ img {
       background-color: #669ec0;
       opacity: 0.8; }
   .page-footer__social-link {
-    position: relative; }
+    position: absolute; }
     .page-footer__social-link::before {
       content: "";
       position: absolute;
