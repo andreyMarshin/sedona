@@ -52,15 +52,17 @@
   }
 
   &__controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    position: relative;
     padding: 20px;
     background-color: #f2f2f2;
   }
 
   &__btn {
-    position: relative;
+    position: absolute;
+    top: 20%;
     display: block;
     background-color: inherit;
     border: none;
@@ -82,26 +84,18 @@
     &--replay {
       width: 16px;
       height: 20px;
-      flex-basis: 70%;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 16px;
-        height: 20px;
-        background-image: url("../img/svg/icon-video-replay.svg");
-      }
+      background-image: url("../img/svg/icon-video-replay.svg");
     }
 
     &--cc {
+      right: 16%;
       width: 32px;
       height: 20px;
       background-image: url("../img/svg/icon-subtitle.svg");
     }
 
     &--fullscreen {
+      right: 6%;
       width: 20px;
       height: 20px;
       background-image: url("../img/svg/icon-fullscreen.svg");

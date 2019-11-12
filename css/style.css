@@ -1065,18 +1065,12 @@ img {
     margin: 0;
     color: #53553d; }
   .video__controls {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    position: relative;
     padding: 20px;
     background-color: #f2f2f2; }
   .video__btn {
-    position: relative;
+    position: absolute;
+    top: 20%;
     display: block;
     background-color: inherit;
     border: none;
@@ -1091,21 +1085,14 @@ img {
     .video__btn--replay {
       width: 16px;
       height: 20px;
-      -ms-flex-preferred-size: 70%;
-      flex-basis: 70%; }
-      .video__btn--replay::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 16px;
-        height: 20px;
-        background-image: url("../img/svg/icon-video-replay.svg"); }
+      background-image: url("../img/svg/icon-video-replay.svg"); }
     .video__btn--cc {
+      right: 16%;
       width: 32px;
       height: 20px;
       background-image: url("../img/svg/icon-subtitle.svg"); }
     .video__btn--fullscreen {
+      right: 6%;
       width: 20px;
       height: 20px;
       background-image: url("../img/svg/icon-fullscreen.svg"); }
@@ -1250,11 +1237,15 @@ img {
     margin: 0 0 20px; }
 
 .review__container--emotions textarea {
-  padding: 20px;
-  margin: 0 0 40px;
   min-width: 100%;
   max-width: 100%;
   min-height: 160px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #333333;
+  padding: 20px;
+  margin: 0 0 40px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
@@ -1328,7 +1319,11 @@ img {
 
 .review__input {
   display: block;
-  padding: 20px;
+  padding: 16px 0 14px 14px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #333333;
   background-color: #f2f2f2;
   border: none;
   outline: none;

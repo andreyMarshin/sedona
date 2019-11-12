@@ -51,11 +51,15 @@
 
     &--emotions {
       textarea {
-        padding: 20px;
-        margin: 0 0 40px;
         min-width: 100%;
         max-width: 100%;
         min-height: 160px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 26px;
+        color: $black;
+        padding: 20px;
+        margin: 0 0 40px;
         box-sizing: border-box;
         border: none;
         outline: none;
@@ -162,7 +166,11 @@
 
   &__input {
     display: block;
-    padding: 20px;
+    padding: 16px 0 14px 14px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+    color: $black;
 
     background-color: #f2f2f2;
     border: none;
