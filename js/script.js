@@ -1,3 +1,5 @@
+console.log(2);
+
 var toggle = document.querySelector('.main-nav__toggle'),
     navList = document.querySelector('.main-nav');
 

@@ -15,9 +15,6 @@
     line-height: 26px;
   }
 
-  &__social {
-  }
-
   &__social-list {
     display: flex;
     justify-content: space-between;
@@ -84,26 +81,34 @@
     padding: 6px 40px 10px 0;
     line-height: 26px;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 27px;
+      height: 34px;
+      background-image: url("../img/svg/logo-htmlacademy.svg");
+    }
+
     &:hover {
-      fill: $blue;
       opacity: 0.6;
     }
 
     &:active, &:focus {
-      fill: #b2b2b2;
-      opacity: 0.6;
+      opacity: 0.3;
     }
   }
 
-  &__copyright-img {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 27px;
-    height: 34px;
-  }
+  // &__copyright-img {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   display: block;
+  //   width: 27px;
+  //   height: 34px;
+  // }
 
   @media (min-width: 525px) {
     &__wrapper {
