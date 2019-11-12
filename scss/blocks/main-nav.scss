@@ -74,10 +74,6 @@
     flex-direction: column;
   }
 
-  &__site-list {
-
-  }
-
   &__site-item {
     padding: 8px 0;
     background-color: $blue;
@@ -117,8 +113,8 @@
   }
 
   &__logo-img {
-    // display: none;
-    // z-index: 100;
+    margin: 0 auto;
+    z-index: 10;
   }
 
   @media (min-width: $tablet-width) {

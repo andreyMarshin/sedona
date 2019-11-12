@@ -62,26 +62,16 @@
 
   &__btn {
     position: absolute;
-    top: 20%;
     display: block;
+    top: 20%;
     background-color: inherit;
     border: none;
     outline: none;
     cursor: pointer;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active, &:focus {
-      opacity: 0.3;
-    }
-
-    &--tablet {
-      display: none;
-    }
+    background: none;
 
     &--replay {
+      left: 6%;
       width: 16px;
       height: 20px;
       background-image: url("../img/svg/icon-video-replay.svg");
@@ -100,7 +90,57 @@
       height: 20px;
       background-image: url("../img/svg/icon-fullscreen.svg");
     }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active, &:focus {
+      opacity: 0.3;
+    }
   }
+
+  // &__btn {
+  //   position: absolute;
+  //   top: 20%;
+  //   display: block;
+  //   background-color: inherit;
+  //   border: none;
+  //   outline: none;
+  //   cursor: pointer;
+
+  //   &:hover {
+  //     opacity: 0.6;
+  //   }
+
+  //   &:active, &:focus {
+  //     opacity: 0.3;
+  //   }
+
+  //   &--tablet {
+  //     display: none;
+  //   }
+
+  //   &--replay {
+  //     width: 16px;
+  //     height: 20px;
+  //     background-image: url("../img/svg/icon-video-replay.svg");
+  //   }
+
+  //   &--cc {
+  //     right: 16%;
+  //     width: 32px;
+  //     height: 20px;
+  //     background-image: url("../img/svg/icon-subtitle.svg");
+  //   }
+
+  //   &--fullscreen {
+  //     right: 6%;
+  //     width: 20px;
+  //     height: 20px;
+  //     background-image: url("../img/svg/icon-fullscreen.svg");
+  //   }
+  // }
 
   // &__btn-icon {
   //   position: absolute;
