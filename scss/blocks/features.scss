@@ -11,29 +11,6 @@
       background-image: url("../img/bg-back-mobile@2x.jpg");
     }
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 369px;
-    //   left: 0;
-    //   right: 0;
-    //   width: 100%;
-    //   min-height: 26px;
-
-    //   background-size: 100%;
-    //   background-repeat: no-repeat;
-    //   background-image: url("../img/bg-intro-triangle-mobile.svg");
-    // }
-
-    // &--inner-page {
-    //   background-position: bottom right 10%;
-    //   background-size: 170%;
-
-    //   &::before {
-    //     top: 136px;
-    //   }
-    // }
-
 
     &::after {
         content: "";
@@ -102,21 +79,6 @@
       @media #{$retina} {
         background-image: url("../img/bg-back-desktop@2x.jpg");
       }
-
-      // &::before {
-      //   top: 460px;
-      //   min-height: 57px;
-      //   background-image: url("../img/bg-intro-triangle-tablet.svg");
-      // }
-
-      // &--inner-page {
-      //   background-position: bottom 2% right 55%;
-      //   background-size: 170%;
-
-      //   &::before {
-      //     top: 237px;
-      //   }
-      // }
 
       &::after {
         display: none;

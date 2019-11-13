@@ -649,7 +649,7 @@ img {
     padding: 34px 20px 0px;
     background-color: #eeeeee;
     color: #333333; }
-  .reasons__item-title::after {
+  .reasons__item-title--first::after {
     content: "";
     position: absolute;
     top: 0;
@@ -661,7 +661,7 @@ img {
     box-sizing: inherit;
     background: -webkit-gradient(linear, left top, right bottom, color-stop(49.6%, #fff), color-stop(50.4%, transparent));
     background: linear-gradient(to bottom right, #fff 49.6%, transparent 50.4%); }
-  .reasons__item-title::before {
+  .reasons__item-title--first::before {
     content: "";
     position: absolute;
     top: 0;

@@ -15,47 +15,33 @@
     }
 
 
-    // &--first {
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: -18px;
-    //     left: 0;
-    //     right: 0;
-    //     width: 100%;
-    //     min-height: 37px;
+    &--first {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 50%;
+        height: 17px;
+        box-sizing: inherit;
+        background: linear-gradient(to bottom right,#fff 49.6%,transparent 50.4%);
+      }
   
-    //     background-size: 100%;
-    //     background-repeat: no-repeat;
-    //     background-image: url("../img/bg-triangle.svg");
-    //     z-index: 150;
-    //   }
-    // }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      width: 50%;
-      height: 17px;
-      box-sizing: inherit;
-      background: linear-gradient(to bottom right,#fff 49.6%,transparent 50.4%);
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 50%;
+        height: 17px;
+        box-sizing: inherit;
+        background: linear-gradient(to bottom left,#fff 49.6%,transparent 50.4%);
+      }
     }
 
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 50%;
-      height: 17px;
-      box-sizing: inherit;
-      background: linear-gradient(to bottom left,#fff 49.6%,transparent 50.4%);
-    }
   }
 
   &__title {
